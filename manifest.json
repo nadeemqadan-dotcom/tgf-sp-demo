@@ -1,11 +1,11 @@
 {
-    "name": "tgf_spare_parts_procurement",
-    "short_name": "tgf_spare_parts_procurement",
+    "name": "Tgf SP",
+    "short_name": "Tgf SP",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "TGF Spare Parts Procurement (pre-production demo)",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

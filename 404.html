@@ -19,18 +19,25 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="TGF Spare Parts Procurement (pre-production demo)">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="tgf_spare_parts_procurement">
+  <meta name="apple-mobile-web-app-title" content="Tgf SP">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>tgf_spare_parts_procurement</title>
+  <title>Tgf SP</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #f4f4f4; }
+    #tgf-loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+    #tgf-loading div { width: 44px; height: 44px; border: 4px solid #d6d6d6; border-top-color: #111;
+      border-radius: 50%; animation: tgf-spin 0.9s linear infinite; }
+    @keyframes tgf-spin { to { transform: rotate(360deg); } }
+  </style>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -42,6 +49,15 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
+  <div id="tgf-loading"><div></div></div>
+  <script>
+    // PDF previews: pdf.js from this site (pdfjs/, version 3.2.146 = the printing package's default), not unpkg.com.
+    window.dartPdfJsBaseUrl = "pdfjs/";
+    window.addEventListener('flutter-first-frame', function () {
+      var el = document.getElementById('tgf-loading');
+      if (el) el.remove();
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
